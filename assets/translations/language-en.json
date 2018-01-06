@@ -1,0 +1,52 @@
+{
+	
+	"site": {
+		
+		"title": "Ticket to Ride: Scoreboard"
+		
+	},
+	
+	
+	"menu": {
+		
+		"title": "Ticket to Ride: Scoreboard"
+		
+	},
+	
+	
+	"settings": {
+		
+		"title": "Settings",
+		
+		"language": "Language",
+		
+		"length-of-routes": "Length of routes",
+		"route-1x": "1 trains/ships",
+		"route-2x": "2 trains/ships",
+		"route-3x": "3 trains/ships",
+		"route-4x": "4 trains/ships",
+		"route-5x": "5 trains/ships",
+		"route-6x": "6 trains/ships",
+		"route-7x": "7 trains/ships",
+		"route-8x": "8 trains/ships",
+		"route-9x": "9 trains/ships",
+		
+		"bonus": "Bonus",
+		"stations": "Stations",
+		"harbours": "Harbours",
+		"longest-route": "Longest route"
+		
+	},
+	
+	
+	"players": {
+		
+		"blue": "Blue",
+		"red": "Red",
+		"green": "Green",
+		"yellow": "Yellow",
+		"black": "Black"
+		
+	}
+	
+}

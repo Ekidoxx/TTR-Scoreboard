@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html dir="ltr" unselectable="on" onselectstart="return false;" ondragstart="return false;">
+	
+	<head>
+		
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		
+		<title data-translate="site.title">Ticket to Ride: Scoreboard</title>
+		<meta name="description" content="A website that is a scoreboard for a Ticket to Ride board game series.">
+		
+		<!-- TODO: https://github.com/audreyr/favicon-cheat-sheet & https://realfavicongenerator.net/-->
+		
+		<meta name="robots" content="index,nofollow">
+		<meta name="googlebot" content="index,nofollow">
+		<meta name="google" content="nositelinkssearchbox">
+		<meta name="google" content="translate">
+		<meta name="rating" content="safe for kids">
+		<meta name="format-detection" content="telephone=no">
+		
+		<!-- TODO: https://github.com/joshbuchea/HEAD#social-->
+		
+		<!-- TODO: https://github.com/joshbuchea/HEAD#browsers--platforms & https://github.com/joshbuchea/HEAD#browsers-chinese-->
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500|Material+Icons" />
+		<link rel="stylesheet" href="https://unpkg.com/material-components-web@0.27.0/dist/material-components-web.min.css" />
+		<link rel="stylesheet" href="./assets/styles/main.css" />
+		
+	</head>
+	
+	<body class="mdc-theme--background mdc-typography">
+		
+		<header class="mdc-toolbar">
+			<div class="mdc-toolbar__row">
+				
+				<section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+					<span data-translate="menu.title" class="mdc-toolbar__title">Ticket to Ride: Scoreboard</span>
+				</section>
+				
+				<section class="mdc-toolbar__section mdc-toolbar__section--align-end mdc-toolbar__section--shrink-to-fit">
+					<!-- TODO: Dialog with content of README.md / GitHub link-->
+					<a href="#" class="material-icons mdc-toolbar__icon mdc-ripple-surface mdc-ripple-surface--accent open-info">info_outline</a>
+					<a href="#" class="material-icons mdc-toolbar__icon mdc-ripple-surface mdc-ripple-surface--accent" id="open-drawer">settings</a>
+				</section>
+				
+			</div>
+		</header>
+		
+		<aside class="mdc-temporary-drawer mdc-temporary-drawer--right">
+			<div class="mdc-temporary-drawer__drawer">
+				
+				<header class="mdc-temporary-drawer__header">
+					<div class="mdc-toolbar mdc-theme--background">
+						<div class="mdc-toolbar__row">
+							
+							<section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+								<span data-translate="settings.title" class="mdc-toolbar__title">Settings</span>
+							</section>
+							
+							<section class="mdc-toolbar__section mdc-toolbar__section--align-end mdc-toolbar__section--shrink-to-fit">
+								<a href="#" class="material-icons mdc-toolbar__icon mdc-ripple-surface mdc-ripple-surface--accent" id="close-drawer">close</a>
+							</section>
+							
+						</div>
+					</div>
+				</header>
+				
+				<main class="mdc-temporary-drawer__content">
+					<div class="mdc-list-group">
+						
+						<h3 data-translate="settings.language" class="mdc-list-group__subheader">...</h3>
+						<ul class="mdc-list">
+							
+							<li class="mdc-list-item">
+								
+								<i class="mdc-list-item__start-detail material-icons" aria-hidden="true">translate</i>
+								
+								English
+								
+								<div class="mdc-radio mdc-list-item__end-detail">
+									<input type="radio" id="settings--language-english" data-lang="EN" class="mdc-radio__native-control" name="language" checked />
+									<div class="mdc-radio__background">
+										<div class="mdc-radio__outer-circle"></div>
+										<div class="mdc-radio__inner-circle"></div>
+									</div>
+								</div>
+								
+							</li>
+							
+							<li class="mdc-list-item">
+								
+								<i class="mdc-list-item__start-detail material-icons" aria-hidden="true">translate</i>
+								
+								Polski
+								
+								<div class="mdc-radio mdc-list-item__end-detail">
+									<input type="radio" id="settings--language-polski" data-lang="PL" class="mdc-radio__native-control" name="language" />
+									<div class="mdc-radio__background">
+										<div class="mdc-radio__outer-circle"></div>
+										<div class="mdc-radio__inner-circle"></div>
+									</div>
+								</div>
+								
+							</li>
+							
+							<li class="mdc-list-item">
+								
+								<i class="mdc-list-item__start-detail material-icons" aria-hidden="true">translate</i>
+								
+								Deutsch
+								
+								<div class="mdc-radio mdc-radio--disabled mdc-list-item__end-detail">
+									<input type="radio" id="settings--language-deutsch" data-lang="DE" class="mdc-radio__native-control" name="language" disabled />
+									<div class="mdc-radio__background">
+										<div class="mdc-radio__outer-circle"></div>
+										<div class="mdc-radio__inner-circle"></div>
+									</div>
+								</div>
+								
+							</li>
+							
+						</ul>
+						
+						<hr class="mdc-list-divider">
+						
+						<h3 data-translate="settings.length-of-routes" class="mdc-list-group__subheader">Length of routes</h3>
+						<ul class="mdc-list">
+							
+							<li class="mdc-list-item">
+								
+								<i class="mdc-list-item__start-detail material-icons" aria-hidden="true">linear_scale</i>
+								
+								<span data-translate="settings.route-1x">1 trains/ships</span>
+								
+								<div class="mdc-switch mdc-list-item__end-detail">
+									<input type="checkbox" id="settings--route-1x" class="mdc-switch__native-control" />
+									<div class="mdc-switch__background">
+										<div class="mdc-switch__knob"></div>
+									</div>
+								</div>
+								
+							</li>
+							
+							<li class="mdc-list-item">
+								
+								<i class="mdc-list-item__start-detail material-icons" aria-hidden="true">linear_scale</i>
+								
+								<span data-translate="settings.route-2x">2 trains/ships</span>
+								
+								<div class="mdc-switch mdc-list-item__end-detail">
+									<input type="checkbox" id="settings--route-2x" class="mdc-switch__native-control" />
+									<div class="mdc-switch__background">
+										<div class="mdc-switch__knob"></div>
+									</div>
+								</div>
+								
+							</li>
+							
+							<li class="mdc-list-item">
+								
+								<i class="mdc-list-item__start-detail material-icons" aria-hidden="true">linear_scale</i>
+								
+								<span data-translate="settings.route-3x">3 trains/ships</span>
+								
+								<div class="mdc-switch mdc-list-item__end-detail">
+									<input type="checkbox" id="settings--route-3x" class="mdc-switch__native-control" />
+									<div class="mdc-switch__background">
+										<div class="mdc-switch__knob"></div>
+									</div>
+								</div>
+								
+							</li>
+							
+							<li class="mdc-list-item">
+								
+								<i class="mdc-list-item__start-detail material-icons" aria-hidden="true">linear_scale</i>
+								
+								<span data-translate="settings.route-4x">4 trains/ships</span>
+								
+								<div class="mdc-switch mdc-list-item__end-detail">
+									<input type="checkbox" id="settings--route-4x" class="mdc-switch__native-control" />
+									<div class="mdc-switch__background">
+										<div class="mdc-switch__knob"></div>
+									</div>
+								</div>
+								
+							</li>
+							
+							<li class="mdc-list-item">
+								
+								<i class="mdc-list-item__start-detail material-icons" aria-hidden="true">linear_scale</i>
+								
+								<span data-translate="settings.route-5x">5 trains/ships</span>
+								
+								<div class="mdc-switch mdc-list-item__end-detail">
+									<input type="checkbox" id="settings--route-5x" class="mdc-switch__native-control" />
+									<div class="mdc-switch__background">
+										<div class="mdc-switch__knob"></div>
+									</div>
+								</div>
+								
+							</li>
+							
+							<li class="mdc-list-item">
+								
+								<i class="mdc-list-item__start-detail material-icons" aria-hidden="true">linear_scale</i>
+								
+								<span data-translate="settings.route-6x">6 trains/ships</span>
+								
+								<div class="mdc-switch mdc-list-item__end-detail">
+									<input type="checkbox" id="settings--route-6x" class="mdc-switch__native-control" />
+									<div class="mdc-switch__background">
+										<div class="mdc-switch__knob"></div>
+									</div>
+								</div>
+								
+							</li>
+							
+							<li class="mdc-list-item">
+								
+								<i class="mdc-list-item__start-detail material-icons" aria-hidden="true">linear_scale</i>
+								
+								<span data-translate="settings.route-7x">7 trains/ships</span>
+								
+								<div class="mdc-switch mdc-list-item__end-detail">
+									<input type="checkbox" id="settings--route-7x" class="mdc-switch__native-control" />
+									<div class="mdc-switch__background">
+										<div class="mdc-switch__knob"></div>
+									</div>
+								</div>
+								
+							</li>
+							
+							<li class="mdc-list-item">
+								
+								<i class="mdc-list-item__start-detail material-icons" aria-hidden="true">linear_scale</i>
+								
+								<span data-translate="settings.route-8x">8 trains/ships</span>
+								
+								<div class="mdc-switch mdc-list-item__end-detail">
+									<input type="checkbox" id="settings--route-8x" class="mdc-switch__native-control" />
+									<div class="mdc-switch__background">
+										<div class="mdc-switch__knob"></div>
+									</div>
+								</div>
+								
+							</li>
+							
+							<li class="mdc-list-item">
+								
+								<i class="mdc-list-item__start-detail material-icons" aria-hidden="true">linear_scale</i>
+								
+								<span data-translate="settings.route-9x">9 trains/ships</span>
+								
+								<div class="mdc-switch mdc-list-item__end-detail">
+									<input type="checkbox" id="settings--route-9x" class="mdc-switch__native-control" />
+									<div class="mdc-switch__background">
+										<div class="mdc-switch__knob"></div>
+									</div>
+								</div>
+								
+							</li>
+							
+						</ul>
+						
+						<hr class="mdc-list-divider">
+						
+						<h3 data-translate="settings.bonus" class="mdc-list-group__subheader">Bonus</h3>
+						<ul class="mdc-list">
+							
+							<li class="mdc-list-item">
+								
+								<i class="mdc-list-item__start-detail material-icons" aria-hidden="true">home</i>
+								
+								<span data-translate="settings.stations">Stations</span>
+								
+								<div class="mdc-switch mdc-list-item__end-detail">
+									<input type="checkbox" id="settings--stations" class="mdc-switch__native-control" />
+									<div class="mdc-switch__background">
+										<div class="mdc-switch__knob"></div>
+									</div>
+								</div>
+								
+							</li>
+							
+							<li class="mdc-list-item">
+								
+								<i class="mdc-list-item__start-detail material-icons" aria-hidden="true">home</i>
+								
+								<span data-translate="settings.harbours">Harbours</span>
+								
+								<div class="mdc-switch mdc-list-item__end-detail">
+									<input type="checkbox" id="settings--harbours" class="mdc-switch__native-control" />
+									<div class="mdc-switch__background">
+										<div class="mdc-switch__knob"></div>
+									</div>
+								</div>
+								
+							</li>
+							
+							<li class="mdc-list-item">
+								
+								<i class="mdc-list-item__start-detail material-icons" aria-hidden="true">timeline</i>
+								
+								<span data-translate="settings.longest-route">Longest route</span>
+								
+								<div class="mdc-switch mdc-list-item__end-detail">
+									<input type="checkbox" id="settings--longest-route" class="mdc-switch__native-control" />
+									<div class="mdc-switch__background">
+										<div class="mdc-switch__knob"></div>
+									</div>
+								</div>
+								
+							</li>
+							
+						</ul>
+						
+					</div>
+				</main>
+				
+			</div>
+		</aside>
+		
+		<main>
+			
+			<div class="panels">
+				<div class="panel active" id="player-1" role="tabpanel" aria-hidden="false">
+					1
+				</div>
+				
+				<div class="panel" id="player-2" role="tabpanel" aria-hidden="true">
+					2
+				</div>
+				
+				<div class="panel" id="player-3" role="tabpanel" aria-hidden="true">
+					3
+				</div>
+				
+				<div class="panel" id="player-4" role="tabpanel" aria-hidden="true">
+					4
+				</div>
+				
+				<div class="panel" id="player-5" role="tabpanel" aria-hidden="true">
+					5
+				</div>
+				
+			</div>
+			
+			<div class="mdc-snackbar mdc-snackbar--align-start" aria-live="assertive" aria-atomic="true" aria-hidden="true">
+				<div class="mdc-snackbar__text"></div>
+				<div class="mdc-snackbar__action-wrapper">
+					<button type="button" class="mdc-snackbar__action-button"></button>
+				</div>
+			</div>
+			
+		</main>
+		
+		<footer class="mdc-toolbar">
+			<div class="mdc-toolbar__row">
+				<section class="mdc-toolbar__section">
+					<nav id="icon-text-tab-bar" class="mdc-tab-bar mdc-tab-bar--icons-with-text" role="tablist">
+						
+						<a href="#player-1" role="tab" aria-controls="player-1" class="mdc-tab mdc-tab--with-icon-and-text mdc-tab--active">
+							<i class="material-icons mdc-tab__icon player--tab-icon player--blue" aria-hidden="true">account_circle</i>
+							<span data-translate="players.blue" class="mdc-tab__icon-text">Blue</span>
+						</a>
+						
+						<a href="#player-2" role="tab" aria-controls="player-2" class="mdc-tab mdc-tab--with-icon-and-text">
+							<i class="material-icons mdc-tab__icon player--tab-icon player--red" aria-hidden="true">account_circle</i>
+							<span data-translate="players.red" class="mdc-tab__icon-text">Red</span>
+						</a>
+						
+						<a href="#player-3" role="tab" aria-controls="player-3" class="mdc-tab mdc-tab--with-icon-and-text">
+							<i class="material-icons mdc-tab__icon player--tab-icon player--green" aria-hidden="true">account_circle</i>
+							<span data-translate="players.green" class="mdc-tab__icon-text">Green</span>
+						</a>
+						
+						<a href="#player-4" role="tab" aria-controls="player-4" class="mdc-tab mdc-tab--with-icon-and-text">
+							<i class="material-icons mdc-tab__icon player--tab-icon player--yellow" aria-hidden="true">account_circle</i>
+							<span data-translate="players.yellow" class="mdc-tab__icon-text">Yellow</span>
+						</a>
+						
+						<a href="#player-5" role="tab" aria-controls="player-5" class="mdc-tab mdc-tab--with-icon-and-text">
+							<i class="material-icons mdc-tab__icon player--tab-icon player--black" aria-hidden="true">account_circle</i>
+							<span data-translate="players.black" class="mdc-tab__icon-text">Black</span>
+						</a>
+						
+						<span class="mdc-tab-bar__indicator"></span>
+						
+					</nav>
+				</section>
+			</div>
+		</footer>
+		
+		<script src="https://unpkg.com/material-components-web@0.27.0/dist/material-components-web.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="./assets/scripts/jquery.localize.min.js"></script>
+		<script src="./assets/scripts/MDC.js"></script>
+		<script src="./assets/scripts/main.js"></script>
+		
+	</body>
+	
+</html>

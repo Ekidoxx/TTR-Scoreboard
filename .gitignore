@@ -1,0 +1,9 @@
+# Windows files
+Desktop.ini
+*.lnk
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Own files
+Notes.md

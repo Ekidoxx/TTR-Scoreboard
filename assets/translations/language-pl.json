@@ -1,0 +1,52 @@
+{
+	
+	"site": {
+		
+		"title": "Wsiąść do pociągu: Tabela wyników"
+		
+	},
+	
+	
+	"menu": {
+		
+		"title": "Wsiąść do pociągu: Tabela wyników"
+		
+	},
+	
+	
+	"settings": {
+		
+		"title": "Ustawienia",
+		
+		"language": "Język",
+		
+		"length-of-routes": "Długość tras",
+		"route-1x": "1 pociągów/statków",
+		"route-2x": "2 pociągów/statków",
+		"route-3x": "3 pociągów/statków",
+		"route-4x": "4 pociągów/statków",
+		"route-5x": "5 pociągów/statków",
+		"route-6x": "6 pociągów/statków",
+		"route-7x": "7 pociągów/statków",
+		"route-8x": "8 pociągów/statków",
+		"route-9x": "9 pociągów/statków",
+		
+		"bonus": "Dodatkowe",
+		"stations": "Dworce",
+		"harbours": "Porty",
+		"longest-route": "Najdłuższa trasa"
+		
+	},
+	
+	
+	"players": {
+		
+		"blue": "Niebieski",
+		"red": "Czerwony",
+		"green": "Zielony",
+		"yellow": "Żółty",
+		"black": "Czarny"
+		
+	}
+	
+}

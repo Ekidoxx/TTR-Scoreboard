@@ -1,0 +1,216 @@
+:root {
+	--mdc-theme-primary: #212121;
+	--mdc-theme-primary-light: #484848;
+	--mdc-theme-primary-dark: #000000;
+	
+	--mdc-theme-secondary: #757575;
+	--mdc-theme-secondary-light: #A4A4A4;
+	--mdc-theme-secondary-dark: #494949;
+	
+	--mdc-theme-background: #F1F1F1;
+}
+.mdc-ripple-surface:after,
+.mdc-ripple-surface:before {
+	background-color: hsla(0, 0%, 0%, 0.16);
+}
+.mdc-ripple-surface--accent:after,
+.mdc-ripple-surface--accent:before {
+	background-color: hsla(0, 0%, 100%, 0.16);
+}
+
+
+::-moz-selection {
+	background: transparent;
+}
+::selection {
+	background: transparent;
+}
+html {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+
+*:focus {
+	border: 0 none transparent;
+	outline: 0 none transparent;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+body > header.mdc-toolbar {
+	-webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+						0 4px 5px 0 rgba(0, 0, 0, 0.14),
+						0 1px 10px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+				0 4px 5px 0 rgba(0, 0, 0, 0.14),
+				0 1px 10px 0 rgba(0, 0, 0, 0.12);
+	z-index: 1;
+}
+body > footer.mdc-toolbar {
+	-webkit-box-shadow: 0 -2px 4px -1px rgba(0, 0, 0, 0.2),
+						0 -4px 5px 0 rgba(0, 0, 0, 0.14),
+						0 -1px 10px 0 rgba(0, 0, 0, 0.12);
+	box-shadow: 0 -2px 4px -1px rgba(0, 0, 0, 0.2),
+				0 -4px 5px 0 rgba(0, 0, 0, 0.14),
+				0 -1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+.mdc-toolbar__icon {
+	border-radius: 50%;
+	height: 16px;
+	margin-top: 3.5%;
+}
+.mdc-toolbar__icon:last-of-type {
+	margin-left: 12px;
+	margin-right: 24px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+
+.mdc-temporary-drawer.mdc-temporary-drawer--right .mdc-temporary-drawer__drawer {
+	-webkit-transform: translateX(107%);
+	transform: translateX(107%);
+	-webkit-transform: translateX(calc(100% + 20px));
+	transform: translateX(calc(100% + 20px));
+	left: auto;
+	right: 0;
+}
+.mdc-temporary-drawer--open.mdc-temporary-drawer--right .mdc-temporary-drawer__drawer {
+	-webkit-transform: none;
+	transform: none;
+}
+
+.mdc-temporary-drawer__header:before {
+	padding-top: 0;
+}
+
+
+.mdc-temporary-drawer .mdc-list-item::before {
+	background: transparent;
+}
+
+.mdc-temporary-drawer .mdc-list-group {
+	margin-top: 12px;
+	margin-bottom: 12px;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+.mdc-temporary-drawer .mdc-list li {
+	padding-left: 0px;
+}
+
+.mdc-list-group__subheader {
+	color: var(--mdc-theme-text-secondary-on-light, rgba(0, 0, 0, 0.54));
+}
+
+.mdc-temporary-drawer .mdc-list-divider {
+	margin-left: -16px;
+	margin-right: -16px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+
+.mdc-list-item__start-detail.mdc-switch,
+.mdc-list-item__end-detail.mdc-switch {
+	height: auto;
+}
+.mdc-switch.mdc-list-item__end-detail {
+	margin-right: 10px;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+html,
+body,
+aside {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+body,
+aside .mdc-temporary-drawer__drawer {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+}
+header,
+footer {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+}
+main {
+	-webkit-box-flex: 1;
+	-ms-flex: auto;
+	flex: auto;
+	overflow: auto;
+	position: relative;
+}
+body > main .panels {
+	max-width: 88%;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.panel {
+	display: none;
+}
+.panel.active {
+	display: block;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/*
+.player--tab-icon::before {
+	content: "";
+	position: absolute;
+	margin-left: 2px;
+	margin-top: 2px;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	opacity: 0.4;
+	z-index: -1;
+}
+.mdc-tab--active .player--tab-icon::before,
+.mdc-tab:hover .player--tab-icon::before {
+	opacity: 1;
+}
+
+.player--blue::before {
+	background: #2196F3;
+}
+.player--red::before {
+	background: #F44336;
+}
+.player--green::before {
+	background: #4CAF50;
+}
+.player--yellow::before {
+	background: #FFC107;
+}
+.player--black::before {
+	background: #212121;
+}
+*/
